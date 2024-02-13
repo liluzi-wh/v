@@ -1,0 +1,109 @@
+@import url(font.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Regular';
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+body{
+    background: violet;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+}
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.wrapper__title{
+    font-size: 40px;
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+    position: absolute;
+
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+    background-color: red;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 44.5%;
+    top: 30%;
+    width: 50px;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+
+    20% {
+        transform: scale(1.25) rotate(-45deg);
+    }
+
+    40% {
+        transform: scale(1.5) rotate(-45deg);
+    }
+}
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.yes{
+    background: rgb(56, 232, 56);
+    outline: none;
+    border: 0.5px solid black;
+    padding: 10px;
+}
+.noo{
+    background: red;
+    outline: none;
+    border: 0.5px solid black;
+}
